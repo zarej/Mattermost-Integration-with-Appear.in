@@ -1,0 +1,9 @@
+{
+  "generator-express-es6": {
+    "promptValues": {
+      "viewEngine": "pug",
+      "cssPreprocessor": "none",
+      "installDependencies": "npm"
+    }
+  }
+}
