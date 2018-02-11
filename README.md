@@ -1,4 +1,4 @@
-Mattermost Integrastion with Appear.in
+Mattermost Integration with Appear.in
 -------------
 This is Slack like slash integration. You will need to enter /appear or any other command that you set in step 4 and you will get as a response appear.in url which you can just click to join a conversation. You can also optionaly provide room name for appear in as a argument to /appear command. If you don't provide anything it will take name like `teamname_roomname`.
  1. Install with
