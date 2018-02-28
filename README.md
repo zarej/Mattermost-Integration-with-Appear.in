@@ -6,6 +6,7 @@ This is Slack like slash integration. You will need to enter /appear or any othe
  1. Install with
  ```
  npm i
+ cp .env.example .env
  ```
  2. Change .env to match your needs. Only required thing here to change is TOKEN, the rest is optional. To get token you will need to finish setup in step 4.
  3. Run with
