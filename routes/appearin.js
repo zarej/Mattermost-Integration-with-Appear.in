@@ -10,23 +10,22 @@ router.post('/', (req, res) => {
   console.log('Request body:', req.body)
   const team = process.env.TEAM || req.body.team_domain
   const room = req.body.text || team + '_' + req.body.channel_name
-  let message = process.env.MESSAGE || 'Please click the button to join the meeting.'
-  let buttonTxt = process.env.BUTTON || 'Join the meeting'
+  let message = process.env.MESSAGE || 'Join the meeting.'
+  let subMessage = process.env.SUB_MESSAGE || 'Meeting room created.'
   req.body.room = room
   Object.keys(req.body).forEach(key => {
     message = message.replace(new RegExp('{{' + key + '}}', 'g'), req.body[key])
-    buttonTxt = buttonTxt.replace(new RegExp('{{' + key + '}}', 'g'), req.body[key])
+    subMessage = subMessage.replace(new RegExp('{{' + key + '}}', 'g'), req.body[key])
   })
   const response = {
     'response_type': 'in_channel',
     'attachments': [{
-      'text': message,
-      'actions': [{
-        'name': buttonTxt,
-        'integration': {
-          'url': 'http://appear.in/' + room
-        }
-      }]
+      'author_name': 'appear.in',
+      'author_icon': 'https://a.slack-edge.com/7f1a0/plugins/appearin/assets/service_512.png',
+      'title': message,
+      'title_link': 'http://appear.in/' + room,
+      'text': subMessage,
+      'color': '#ff0000'
     }]
   }
   res.json(response)
