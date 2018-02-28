@@ -1,6 +1,7 @@
 Mattermost Integration with Appear.in
 -------------
 ![alt text](http://storage6.static.itmages.com/i/18/0228/h_1519777549_7945594_30465fe611.png)
+
 This is Slack like slash integration. You will need to enter /appear or any other command that you set in step 4 and you will get as a response appear.in url which you can just click to join a conversation. You can also optionaly provide room name for appear in as a argument to /appear command. If you don't provide anything it will take name like `teamname_roomname`.
  1. Install with
  ```
