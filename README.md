@@ -22,7 +22,7 @@ UPDATE: This plugin was originally written to support only Appear.in and later i
 ![alt example](https://cloud.appmodule.net/apps/files_sharing/publicpreview/P48gJdGpygP5nQJ?x=1904&y=609&a=true&file=Selection_072.png&scalingup=0)
 ![alt example](https://cloud.appmodule.net/apps/files_sharing/publicpreview/B4mDbGqdWYN4dy2?x=1904&y=609&a=true&file=Selection_073.png&scalingup=0)
  
- 5. Iy you are using localhost and http instead of https you will need to change Mattermost server configuration. Make sure that you have following
+ 5. If you are using localhost and http instead of https you will need to change Mattermost server configuration. Make sure that you have following
  ```
  "AllowedUntrustedInternalConnections": "localhost",
  "EnableInsecureOutgoingConnections": true,
