@@ -19,3 +19,4 @@ This is Slack like slash integration. You will need to enter /appear or any othe
  "AllowedUntrustedInternalConnections": "localhost",
  "EnableInsecureOutgoingConnections": true,
  ```
+ 6. Even if you use https you need to System Console / Developer and set Allow untrusted internal connections to: <host of the app>
