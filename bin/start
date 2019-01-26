@@ -14,6 +14,9 @@ require('babel-polyfill')
 const app = require('../app').default
 const debug = require('debug')('mattermost-plugins:server')
 const http = require('http')
+const https = require('https')
+const fs = require('fs')
+
 require('dotenv').config()
 
 /**
@@ -47,7 +50,17 @@ app.set('port', port)
  * Create HTTP server.
  */
 
-const server = http.createServer(app)
+let server
+
+if (process.env.HTTPS.toLowerCase() === 'true') {
+  var privateKey = fs.readFileSync(process.env.SSL_KEY, 'utf8')
+  var certificate = fs.readFileSync(process.env.SSL_CERT, 'utf8')
+
+  var credentials = { key: privateKey, cert: certificate }
+  server = https.createServer(credentials, app)
+} else {
+  server = http.createServer(app)
+}
 
 /**
  * Listen on provided port, on all network interfaces.

@@ -18,6 +18,7 @@
     "debug": "^3.0.0",
     "dotenv": "^5.0.0",
     "express": "^4.15.4",
+    "https": "^1.0.0",
     "morgan": "^1.9.1",
     "pug": "^2.0.0-rc.3",
     "serve-favicon": "^2.4.3"
