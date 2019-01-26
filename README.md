@@ -27,4 +27,4 @@ UPDATE: This plugin was originally written to support only Appear.in and later i
  "AllowedUntrustedInternalConnections": "localhost",
  "EnableInsecureOutgoingConnections": true,
  ```
- 6. Even if you use https you need to System Console / Developer and set Allow untrusted internal connections to: <enter host of the app without port eg. server.com>
+ 6. Even if you use https you need to System Console / Developer and set Allow untrusted internal connections to: `<enter host of the app without port eg. server.com>`
