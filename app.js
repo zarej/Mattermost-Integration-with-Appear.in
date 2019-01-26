@@ -9,6 +9,7 @@ import cors from 'cors'
 
 import index from './routes/index'
 import appearin from './routes/appearin'
+import jitsi from './routes/jitsi'
 
 const app = express()
 const debug = Debug('mattermost-plugins:app')
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
 app.use('/appearin', appearin)
+app.use('/jitsi', jitsi)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
