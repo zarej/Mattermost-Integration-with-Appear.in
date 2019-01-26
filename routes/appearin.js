@@ -4,7 +4,7 @@ require('dotenv').config()
 const router = express.Router()
 
 router.post('/', (req, res) => {
-  if (req.body.token !== process.env.TOKEN) {
+  if (req.body.token !== process.env.TOKEN_APPEAR) {
     return res.status(401).json('Unauthorized')
   }
   console.log('Request body:', req.body)
