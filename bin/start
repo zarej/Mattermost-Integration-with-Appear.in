@@ -53,11 +53,15 @@ app.set('port', port)
 let server
 
 if (process.env.HTTPS.toLowerCase() === 'true') {
-  var privateKey = fs.readFileSync(process.env.SSL_KEY, 'utf8')
-  var certificate = fs.readFileSync(process.env.SSL_CERT, 'utf8')
+  try {
+    var privateKey = fs.readFileSync(process.env.SSL_KEY, 'utf8')
+    var certificate = fs.readFileSync(process.env.SSL_CERT, 'utf8')
 
-  var credentials = { key: privateKey, cert: certificate }
-  server = https.createServer(credentials, app)
+    var credentials = { key: privateKey, cert: certificate }
+    server = https.createServer(credentials, app)
+  } catch (e) {
+    console.log(`Error starting https: ${e}`)
+  }
 } else {
   server = http.createServer(app)
 }
