@@ -1,6 +1,6 @@
-Mattermost Integration with Appear.in
+Mattermost Integration with Appear.in and jitsi
 -------------
-![alt text](http://storage6.static.itmages.com/i/18/0228/h_1519777549_7945594_30465fe611.png)
+![alt example](https://cloud.appmodule.net/apps/files_sharing/publicpreview/37mP76wom8DeiSk?x=1904&y=609&a=true&file=Selection_071.png&scalingup=0)
 
 This is Slack like slash integration. You will need to enter /appear or any other command that you set in step 4 and you will get as a response appear.in url which you can just click to join a conversation. You can also optionaly provide room name for appear in as a argument to /appear command. If you don't provide anything it will take name like `teamname_roomname`.
  1. Install with
