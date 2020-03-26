@@ -1,5 +1,9 @@
 Mattermost Integration with Appear.in and Jitsi
 -------------
+
+# This integration is deprecated I created new plugin which is much easier to use https://github.com/appmodule/mattermost-plugin-jitsi For now supports only Jitsi
+
+
 ![alt example](https://cloud.appmodule.net/apps/files_sharing/publicpreview/37mP76wom8DeiSk?x=1904&y=609&a=true&file=Selection_071.png&scalingup=0)
 
 This is Slack like slash integration. You will need to enter /appear or any other command that you set in step 4 and you will get as a response [appear.in](https://appear.in) or [Jitsi](https://jitsi.org/) url which you can just click to join a conversation. You can also optionaly provide room name for appear in as a argument to /appear command. If you don't provide anything it will take name like `teamname_roomname`.
